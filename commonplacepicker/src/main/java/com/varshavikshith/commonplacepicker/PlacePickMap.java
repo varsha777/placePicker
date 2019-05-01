@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.location.Address;
 import android.location.Geocoder;
 import android.location.Location;
@@ -87,6 +88,8 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
 
         Toolbar toolbar = null;
         toolbar = findViewById(R.id.place_picker_library_toolbar_id);
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setSubtitleTextColor(Color.WHITE);
 
         setSupportActionBar(toolbar);
 
