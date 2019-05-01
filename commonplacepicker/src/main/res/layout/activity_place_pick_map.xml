@@ -13,7 +13,7 @@
         android:id="@+id/place_picker_library_toolbar_id"
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
-        android:background="#1B1E24">
+        android:background="#1caf9a">
 
     </android.support.v7.widget.Toolbar>
 
@@ -50,7 +50,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_gravity="bottom"
-        android:background="#1caf9a"
+        android:background="#1B1E24"
         android:gravity="center"
         android:text="Select Location"
         android:textColor="#ffff" />
