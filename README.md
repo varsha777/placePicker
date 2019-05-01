@@ -1,10 +1,12 @@
 # placePicker
+  usage  
+ implementation 'com.github.varsha777:placePicker:1.7'
 
 # To start place picker activity
 
-Intent intent=new Intent(this,PlacePickMap.class);
-intent.putExtra(PlacePickMap.PlacePickerConstants.GOOGLE_MAPS_KEY,getString(R.string.google_maps_key));//// google maps key is manditory
-startActivityForResult(intent,REQUEST_CODE);
+ Intent intent=new Intent(this,PlacePickMap.class);
+ intent.putExtra(PlacePickMap.PlacePickerConstants.GOOGLE_MAPS_KEY,getString(R.string.google_maps_key));//// google maps key is manditory
+ startActivityForResult(intent,REQUEST_CODE);
 
 # Result
 
