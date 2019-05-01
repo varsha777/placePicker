@@ -3,7 +3,7 @@
 # To start place picker activity
 
 Intent intent=new Intent(this,PlacePickMap.class);
-intent.putExtra("GOOGLE_MAPS_KEY",getString(R.string.google_maps_key));//// google maps key is manditory
+intent.putExtra(PlacePickMap.PlacePickerConstants.GOOGLE_MAPS_KEY,getString(R.string.google_maps_key));//// google maps key is manditory
 startActivityForResult(intent,REQUEST_CODE);
 
 # Result
@@ -13,9 +13,9 @@ startActivityForResult(intent,REQUEST_CODE);
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == RESULT_OK) {
             if (requestCode == 1234) {
-               double latitude=data.getDoubleExtra("SELECT_LOCATION_LATITUDE", 0.0);
-               double longitude=data.getDoubleExtra("SELECT_LOCATION_LONGITUDE", 0.0);
-               Strng address=data.getStringExtra("PLACE_PICKER_ADDRESS");
+               double latitude=data.getDoubleExtra(PlacePickMap.PlacePickerConstants.SELECT_LOCATION_LATITUDE, 0.0);
+               double longitude=data.getDoubleExtra(PlacePickMap.PlacePickerConstants.SELECT_LOCATION_LONGITUDE, 0.0);
+               String address=data.getStringExtra(PlacePickMap.PlacePickerConstants.PLACE_PICKER_ADDRESS);
             }
         }
     }
