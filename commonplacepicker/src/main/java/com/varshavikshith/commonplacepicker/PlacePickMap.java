@@ -71,7 +71,7 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
     private ReverseGeocodingTask reverseGeocodingTask = null;
     private ActionBar actionBar = null;
 
-    interface PlacePickerConstants {
+    public interface PlacePickerConstants {
         String GOOGLE_MAPS_KEY = "GOOGLE_MAPS_KEY";
         String SELECT_LOCATION_LATITUDE = "SELECT_LOCATION_LATITUDE";
         String SELECT_LOCATION_LONGITUDE = "SELECT_LOCATION_LONGITUDE";
