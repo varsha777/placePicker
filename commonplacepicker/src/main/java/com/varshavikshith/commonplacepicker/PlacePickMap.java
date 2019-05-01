@@ -50,6 +50,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.varshavikshith.commonplacepicker.R;
+
 public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
