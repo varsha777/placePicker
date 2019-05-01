@@ -71,12 +71,19 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
     private ReverseGeocodingTask reverseGeocodingTask = null;
     private ActionBar actionBar = null;
 
+    interface PlacePickerConstants {
+        String GOOGLE_MAPS_KEY = "GOOGLE_MAPS_KEY";
+        String SELECT_LOCATION_LATITUDE = "SELECT_LOCATION_LATITUDE";
+        String SELECT_LOCATION_LONGITUDE = "SELECT_LOCATION_LONGITUDE";
+        String PLACE_PICKER_ADDRESS = "PLACE_PICKER_ADDRESS";
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_place_pick_map);
 
-        String mapsKey = getIntent().getStringExtra("GOOGLE_MAPS_KEY");
+        String mapsKey = getIntent().getStringExtra(PlacePickerConstants.GOOGLE_MAPS_KEY);
 
         if (mapsKey != null) {
             if (mapsKey.isEmpty()) {
@@ -146,9 +153,9 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
-                intent.putExtra("SELECT_LOCATION_LATITUDE", mCenterLatLong.latitude);
-                intent.putExtra("SELECT_LOCATION_LONGITUDE", mCenterLatLong.longitude);
-                intent.putExtra("PLACE_PICKER_ADDRESS", mCurrentLocation);
+                intent.putExtra(PlacePickerConstants.SELECT_LOCATION_LATITUDE, mCenterLatLong.latitude);
+                intent.putExtra(PlacePickerConstants.SELECT_LOCATION_LONGITUDE, mCenterLatLong.longitude);
+                intent.putExtra(PlacePickerConstants.PLACE_PICKER_ADDRESS, mCurrentLocation);
                 setResult(RESULT_OK, intent);
                 finish();
             }
