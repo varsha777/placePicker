@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CommonPlacePIcker</string>
+    <string name="pp_dialog_message">Location not enabled!</string>
+    <string name="pp_dialog_positive_btn">Open location settings</string>
+    <string name="pp_dialog_negitive_btn">Cancel</string>
+    <string name="pp_fail_gps">Please turn on GPS…Unable to support</string>
+    <string name="pp_no_location_support">Location not supported in this device</string>
+    <string name="pp_map_unable_to_create">Sorry! unable to create maps</string>
+    <string name="pp_play_services_not_available">Google Play Services is not available:</string>
+</resources>
