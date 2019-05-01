@@ -19,6 +19,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -83,6 +84,11 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         Places.initialize(getApplicationContext(), mapsKey);
+
+        Toolbar toolbar = null;
+        toolbar = findViewById(R.id.place_picker_library_toolbar_id);
+
+        setSupportActionBar(toolbar);
 
         actionBar = getSupportActionBar();
         if (actionBar != null) {
