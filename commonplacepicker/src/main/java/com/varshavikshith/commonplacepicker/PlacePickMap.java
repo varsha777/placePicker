@@ -349,7 +349,6 @@ public class PlacePickMap extends AppCompatActivity implements OnMapReadyCallbac
             List<Place.Field> fields = Arrays.asList(Place.Field.NAME, Place.Field.LAT_LNG);
             Intent intent = new Autocomplete.IntentBuilder(
                     AutocompleteActivityMode.FULLSCREEN, fields)
-                    .setCountry("IN")
                     .build(this);
 
             startActivityForResult(intent, REQUEST_CODE_AUTOCOMPLETE);
